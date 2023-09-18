@@ -21,7 +21,8 @@ RUN apt-get update && \
 ADD footpatch.tar.gz /opt/
 RUN ln -s /opt/footpatch/infer-linux64-v0.9.3/infer/bin/infer /usr/bin/infer
 RUN ln -s /opt/footpatch/infer-linux64-v0.9.3/infer/bin/infer /usr/bin/footpatch
-
+RUN mkdir /opt/footpatch/infer-linux64-v0.9.3/infer/bin/python
+RUN ln -s /opt/footpatch/infer-linux64-v0.9.3/infer/lib/python/infer.py /opt/footpatch/infer-linux64-v0.9.3/infer/bin/python/infer.py
 
 # install dependencies for benchmark programs
 RUN DEBIAN_FRONTEND=noninteractive apt-get install --yes --no-install-recommends \
