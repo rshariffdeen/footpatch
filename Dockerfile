@@ -91,6 +91,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install --yes --no-install-recommends
     pkg-config \
     psmisc \
     python3 \
+    rename \
     rsync \
     subversion \
     tcl-dev \
